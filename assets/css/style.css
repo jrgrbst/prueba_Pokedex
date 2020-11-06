@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', 'Xanh Mono', monospace;
+    background-color: #343637;
+    color: #fffafa;
+}
+
+h1 {
+    font-family: 'Xanh Mono', 'IBM Plex Mono', monospace;
+}
+
+a {
+    color: pink;
+}
+
+header {
+    padding: 200px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 50px;
+}
+
+.formulario {
+    padding-bottom: 50px;
+}
+
+footer {
+    background-color: black;
+    padding: 50px 0px;
+    text-align: center;
+    
+}
