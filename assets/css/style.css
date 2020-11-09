@@ -3,35 +3,108 @@ body {
     padding: 0;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'IBM Plex Mono', 'Xanh Mono', monospace;
-    background-color: #343637;
-    color: #fffafa;
+    font-family: 'Montserrat','IBM Plex Mono', 'Xanh Mono', sans-serif, monospace;
+    font-size: 18px;
 }
 
 h1 {
     font-family: 'Xanh Mono', 'IBM Plex Mono', monospace;
 }
 
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+p, ul, a {
+    font-family: 'IBM Plex Mono', monospace;
+}
+
 a {
     color: pink;
 }
 
+ul {
+    list-style-type: disc;
+}
+
 header {
-    padding: 200px;
-    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 150px;
 }
 
 header h1 {
     font-size: 50px;
+    transition: 0.3s ease-in-out;
 }
 
-.formulario {
+header h1:hover {
+    color: deeppink
+}
+
+input {
+    padding: 10px;
+    width: 500px;
+    height: 60px;
+    border-radius: 4px;
+    border: 3px solid pink;
+}
+
+button {
+    margin-left: 10px;
+    width: 200px;
+    height: 60px;
+    border: none;
+    color: pink;
+    border-radius: 4px;
+    transition: ease-out 0.3s;
+    font-size: 20px;
+    outline: none;
+    border: 3px solid pink;
+    z-index: 1;
+    background-color: dimgrey;
+}
+
+button:hover{
+    color: white;
+    cursor: pointer;
+    background-color: pink;
+}
+
+#formulario {
+    display: flex;
+    font-family: 'IBM Plex Mono', monospace;
     padding-bottom: 50px;
 }
 
+#pokeinfo {
+    padding: 30px 0px;
+}
+
+#pokename {
+    text-transform: capitalize;
+}
+
+#iconos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+    align-content: start;
+    width: 400px;
+    height: 100px;
+    margin: 50px 0px;
+}
+
+#title {
+    margin-bottom: 50px;
+}
+
+
 footer {
     background-color: black;
+    font-family: 'IBM Plex Mono', monospace;
     padding: 50px 0px;
     text-align: center;
-    
+    color: floralwhite;
 }
