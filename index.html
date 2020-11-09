@@ -9,20 +9,20 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Poké_Ball_icon.svg/768px-Poké_Ball_icon.svg.png" type="image/x-icon">
-    <title>\ Pokedex \</title>
+    <title>\ Pokédex \</title>
 </head>
 <body>
     <header class="container">
-        <h1>\ Pokedex \</h1>
-        <h4>Encuentra tu Pokemón favorito</h4>
+        <h1>\ Pokédex \</h1>
+        <h4>Encuentra tu Pokémon favorito</h4>
     </header>
     <section id="formulario" class="container">
-            <input type="text" placeholder="Ingresa el nombre o ID de tu Pokemón">
+            <input type="text" placeholder="Ingresa el ID o nombre de tu Pokémon">
             <button id="pokesearch">Buscar</button>
     </section>
     <section id="pokeinfo" class="container" >
-        <div id="pokename" class="col-12 py-3"></div>
-        <div id="iconos" class="col-6">
+        <div id="pokename" class="col-12 mb-5"></div>
+        <div id="iconos" class="col-12 mb-5">
             <div id="pokeicon1"></div>
                 
             <div id="pokeicon2"></div>
@@ -32,7 +32,15 @@
             <div id="pokeicon4"></div>
         </div>
 
-        <div id="pokeAbility" class="col-6">
+        <div id="pokeType" class="col-12 mb-5">
+            <div id="info"><p></p></div>
+        </div>
+
+        <div id="pokeExp" class="col-12 mb-5">
+            <div id="info"><p></p></div>
+        </div>
+
+        <div id="pokeAbility" class="col-12 mb-5">
                 <div id="title">
                     <h2></h2>
                 </div>
@@ -40,10 +48,10 @@
                     <ul></ul>
                 </div>
         </div>
-        <div></div>
-
-        <div id="pokeGraph" style="height: 300px; width: 100%;"></div>
-
+        <div id="pokeStats" class="col-12 mb-5">
+            <div id="title"><h2></h2></div>
+            <div id="pokeGraph"></div>
+        </div>
         </section>
 
     <footer>
@@ -52,7 +60,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

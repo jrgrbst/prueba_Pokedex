@@ -19,6 +19,7 @@ h2 {
 
 p, ul, a {
     font-family: 'IBM Plex Mono', monospace;
+    font-size: 18px;
 }
 
 a {
@@ -26,7 +27,8 @@ a {
 }
 
 ul {
-    list-style-type: disc;
+    list-style-type: upper-roman;
+    text-transform: capitalize;
 }
 
 header {
@@ -45,6 +47,7 @@ header h1:hover {
 
 input {
     padding: 10px;
+    padding-left: 15px;
     width: 500px;
     height: 60px;
     border-radius: 4px;
@@ -63,7 +66,7 @@ button {
     outline: none;
     border: 3px solid pink;
     z-index: 1;
-    background-color: dimgrey;
+    background-color: black;
 }
 
 button:hover{
@@ -84,6 +87,11 @@ button:hover{
 
 #pokename {
     text-transform: capitalize;
+}
+
+#pokeGraph {
+    height: 300px; 
+    width: 100%;
 }
 
 #iconos {
