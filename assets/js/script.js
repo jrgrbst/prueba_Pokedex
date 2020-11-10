@@ -28,26 +28,13 @@ $('#pokesearch').on('click',()=>{
             <img src="${infoPoke.sprites.back_shiny}" alt="${infoPoke.name} shiny">
             `);
 
-            $('#pokeType > #info > p').html(`<h5>Tipo: </h5><p>${infoPoke.types[0]}</p>`);
+            $('#pokeType > #info > p').html(`<h5>Tipo <i class="fas fa-fire-alt"></i></h5><p>${infoPoke.types[0].type.name}</p>`);
 
-            $('#pokeExp > #info > p').html(`<h5>Experiencia Base: </h5><p>${infoPoke.base_experience}</p>`);
+            $('#pokeSpecie > #info > p').html(`<h5>Especie <i class="fas fa-binoculars"></i></h5><p>${infoPoke.species.name}</p>`);
 
-            $('#pokeAbility > #title > h2').html("Habilidades");
+            $('#pokeExp > #info > p').html(`<h5>Experiencia Base <i class="fas fa-heart"></i></h5><p>${infoPoke.base_experience}</p>`);
 
-            $('#pokeAbility > #lista > ul').html("");
-            infoPoke.abilities.forEach((habilidad,index) => {
-                $('#pokeAbility > #lista > ul').append(`<li>${habilidad.ability.name}</li>`);
-            });
-
-
-            $('#pokemove > ul').html("");
-            infoPoke.moves.forEach((movimiento,index) => {
-                $('#pokemove > ul').append(`
-                    <li>${index+1} - ${movimiento.move.name}</li>
-                `);
-            });
-
-            $('#pokeStats > #title > h2').html("Estadísticas");
+            $('#pokeStats > #title > h2').html(`Estadísticas <i class="fas fa-chart-pie"></i>`);
 
             CanvasJS.addColorSet("pokePastels",
                 [
@@ -96,6 +83,12 @@ $('#pokesearch').on('click',()=>{
             };
     
             $("#pokeGraph").CanvasJSChart(options);
+
+            $('#pokeAbility > #title > h2').html(`Habilidades  <i class="fas fa-bolt"></i>`);
+            $('#pokeAbility > #lista > ul').html("");
+            infoPoke.abilities.forEach((habilidad,index) => {
+                $('#pokeAbility > #lista > ul').append(`<li>${habilidad.ability.name}</li>`);
+            });
 
         },
 
