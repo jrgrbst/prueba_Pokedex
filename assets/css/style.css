@@ -11,12 +11,6 @@ h1 {
     font-family: 'Xanh Mono', 'IBM Plex Mono', monospace;
 }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
-}
-
 p, ul, a {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 18px;
@@ -79,6 +73,25 @@ button:hover{
     display: flex;
     font-family: 'IBM Plex Mono', monospace;
     padding-bottom: 50px;
+}
+
+#habs, #stats, #pokename > h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    transition: 0.3s ease-in-out;
+}
+
+#pokename > h2:hover {
+    color: cornflowerblue;
+}
+
+#habs:hover {
+    color: coral;
+}
+
+#stats:hover {
+    color: palegreen;
 }
 
 #pokeinfo {
