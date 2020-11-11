@@ -1,11 +1,20 @@
+$(document).ready(function (){
+
 $('#pokesearch').on('click',()=>{
+
+    function getPokeRandom(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    let entradaRandom = getPokeRandom(1,810);
+    console.log(entradaRandom);
 
     let entrada = $('input').val();
     console.log(entrada);
 
     $.ajax({
         type: "GET",
-        url: `https://pokeapi.co/api/v2/pokemon/${entrada}`,
+        url: `https://pokeapi.co/api/v2/pokemon/${entrada.toLowerCase()}`,
         dataType: "json",
         success: function (response) {
             console.log(response);
@@ -86,7 +95,7 @@ $('#pokesearch').on('click',()=>{
 
             $('#pokeAbility > #title > h2').html(`Habilidades  <i class="fas fa-bolt"></i>`);
             $('#pokeAbility > #lista > ul').html("");
-            infoPoke.abilities.forEach((habilidad,index) => {
+            infoPoke.abilities.forEach((habilidad) => {
                 $('#pokeAbility > #lista > ul').append(`<li>${habilidad.ability.name}</li>`);
             });
 
@@ -102,5 +111,7 @@ $('#pokesearch').on('click',()=>{
         }
     });
 
+
     $('input').val("");
+});
 });
